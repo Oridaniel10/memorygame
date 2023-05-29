@@ -1,0 +1,128 @@
+
+h1 {
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(109, 125, 112);
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#exp {
+  background-color: lightgray;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  color: white;
+  font-family: Arial, sans-serif;
+  background-image: url("backgroung.jpg");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  perspective: 600px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.card .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card .card-inner .card-front,
+.card .card-inner .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card .card-inner .card-front {
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+.card .card-inner .card-back {
+  background-color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-inner .card-back img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.controls-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#result {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.moves-count,
+.time {
+  margin-bottom: 10px;
+}
+
+.moves-count span,
+.time span {
+  font-weight: bold;
+}
+
+#start {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#start:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+  

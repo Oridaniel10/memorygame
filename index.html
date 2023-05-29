@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Game</title>
+  
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <h1 class="display-4 text-center mb-4">Memory Game<br>Ori Daniel<br> Sound on recommanded</h1>
+  <audio id="flipSound">
+    <source src="whoosh-6316.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="endd">
+    <source src="announcement-sound-4-21464.mp3" type="audio/mpeg">
+  </audio>
+
+    <hr>
+    
+    <p id="p"></p>
+  <div class="wrapper">
+    <div class="stats-container">
+      <div id="moves-count"></div>
+      <div id="time"></div>
+    </div>
+    <div class="game-container"></div>
+  </div>
+  <div class="controls-container">
+    <p id="exp">
+      Game Instructions :
+You must turn over 2 cards at a time, if you turned over 2 identical cards they will remain open, if you turned over different cards remember them!
+Your goal is to turn over 2 identical cards each turn until all cards are face up.
+    </p>
+    <label for="fname">Full Name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Enter your name..."><br><br>
+    <label for="numOfCards">Number of Pairs:</label><br>
+    <select id="numOfCards" name="numOfCards">
+      <option value="2">2 - Beginner</option>
+      <option value="4">4</option>
+      <option value="6">6</option>
+      <option value="8">8</option>
+      <option value="10">10</option>
+      <option value="12">12</option>
+      <option value="14">14</option>
+      <option value="16">16</option>
+      <option value="18">18</option>
+      <option value="20">20</option>
+      <option value="22">22</option>
+      <option value="24">24</option>
+      <option value="26">26</option>
+      <option value="28">28</option>
+      <option value="30">30 - Master</option>
+    </select>><br><br>
+
+    <button id="start">Start Game</button>
+  </div>
+  <div class="result-container">
+    <p id="result"></p>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
